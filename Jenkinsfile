@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build Maven'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/raed-github/Springboot-Devops-Automaiton-Jenkins-Docker-Kubernetes.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/raed-github/Springboot-Devops-Automaiton-Jenkins-Docker-Kubernetes.git']]])
                 sh 'mvn clean install'
             }
         }
